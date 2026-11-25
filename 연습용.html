@@ -21,9 +21,18 @@
 <button onclick="sayHello()">눌러보세요</button>
 <p id="message">아직 아무 일도 없어요.</p>
 
+<input id="nameInput" placeholder="이름을 입력하세요">
+<button onclick="showName()">확인</button>
+<p id="result"></p>
+
 <script>
     function sayHello() {
         document.getElementById("message").innerText = "버튼이 눌렸어요!";
+    }
+
+    function showName() {
+        const name = document.getElementById("nameInput").value;
+        document.getElementById("result").innerText = name + "님, 환영합니다!";
     }
 </script>
 
