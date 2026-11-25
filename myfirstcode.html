@@ -20,7 +20,7 @@
 <button onclick="sayHello()">눌러보세요</button>
 <p id="message">아직 아무 일도 없어요.</p>
 
-<input id="nameInput" placeholder="이름을 입력하세요">
+<input id="nameInput" placeholder="이름을 입력하세요" onkeydown="if (event.key === 'Enter') showName()">
 <button onclick="showName()">확인</button>
 
 <button onclick="showName1()">확인</button>

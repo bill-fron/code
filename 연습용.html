@@ -23,6 +23,7 @@
 
 <input id="nameInput" placeholder="이름을 입력하세요">
 <button onclick="showName()">확인</button>
+<button onclick="showName2()">확인</button>
 <p id="result"></p>
 
 <script>
@@ -34,5 +35,15 @@
         const name = document.getElementById("nameInput").value;
         document.getElementById("result").innerText = name + "님, 환영합니다!";
     }
+
+    function showName2() {
+        const name = document.getElementById("nameInput").value;
+        if (name === "") {
+            document.getElementById("result").innerText = "이름을 먼저 입력해 주세요!";
+        } else {
+            document.getElementById("result").innerText = name + "님, 환영합니다!";
+        }
+    }
+    
 </script>
 
