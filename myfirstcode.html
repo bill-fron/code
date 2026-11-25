@@ -22,8 +22,6 @@
 
 <input id="nameInput" placeholder="이름을 입력하세요" onkeydown="if (event.key === 'Enter') showName()">
 <button onclick="showName()">확인</button>
-
-<button onclick="showName1()">확인</button>
 <p id="result"></p>
 
 <script>
@@ -36,7 +34,7 @@
     document.getElementById("result").innerText = name + "님, 환영합니다!";
   }
 
-  function showName1() {
+  function showName() {
     const name = document.getElementById("nameInput").value;
     if (name === "") {
       document.getElementById("result").innerText = "이름을 먼저 입력해 주세요!";
