@@ -1,0 +1,59 @@
+1.<style>은 **CSS 코드를 넣는 상자(태그)**이고, CSS가 꾸미기 언어
+2. <h1></h1> 큰제목, <p></p> 일반 글씨, 설명
+3. h1 {
+    color: green;
+  } 이거는 제목에대한 색깔
+4. p {
+    font-size: 20px;
+  } 이거는 설명,글씨 에대한 글씨크기
+5. <ul> </ul>는 unordered list 점 목록 
+6. <li> </li> 는 항목 하나
+7. <a> </a>는 링크를 만드는태그 / <ol> </ol>는 ordered list 숫자가 붙는다
+8. href=" " 이 링크를 누르면 어디로 이동하는지
+9. <button> </button> 누를수 있는 버튼
+10. onclick="sayHello()" 는 버튼이 눌리면 "sayHello" 작업을 실행해라 
+11. id="message" 는 문장에 이름표를 붙여 이후 JavaScript가 어떤것을 명령하거나 바꿔달라고 할때 작용할수있음
+12. <script> </script> 는 **JavaScript 코드를 넣는 상자(태그)**이고, JavaScript가 동작을 만드는 언어
+13. function sayHello() { } 는"sayHello"라는 함수/작업을 만든다
+14. document.getElementById("message") 는 document 페이지에서 이름이 "message" 인걸 찾아라
+15. .innerText = "버튼이 눌렸어요!"; 그안의 글씨를 "버튼이 눌렸어요!" 로 바꿔라
+     ㄴ버튼이 눌리면 sayHello실행 - message 문장을 찾아 - 글씨를 바꿔라
+16. <input> 는 글씨 입력창 / 닫는태그 없음 
+17. placeholder는 태그가 아니라 <input> 태그에 붙는 속성. 
+  앞의 href, onclick, id와 같은 종류. "닫는 태그가 없다"는 특징은 <input>에 해당 
+18. .value 는 입력창에 사용자가 쓴 내용
+19.  const name = 는 값에 이름표를 붙여 상자에 담아둔다. [입력창에서 가져온 글씨를 name상자에 담음]
+20. 아래코드 흐름, 개념 해석하면 : 확인 버튼 클릭 - 입력창의 글씨를 꺼내서(찾아서)name에 담기 - name뒤에 문장을 붙여서 - result 에 표시 
+<input id="nameInput" placeholder="이름을 입력하세요">
+<button onclick="showName()">확인</button>
+<p id="result"></p>
+<script>
+ function showName() {
+    const name = document.getElementById("nameInput").value;
+    document.getElementById("result").innerText = name + "님, 환영합니다!";
+  }
+</script>
+21. onkeydown: onclick의 친구예요. onclick이 "눌렸을 때"라면 onkeydown은 **"키보드의 키가 눌렸을 때"  
+     <input>에 붙는 속성
+22.event: 방금 일어난 일에 대한 정보 꾸러미. 어떤 키가 눌렸는지, 어디를 클릭했는지 같은 정보가 담겨 있다
+23.event.key: 그 꾸러미 안에서 **"눌린 키의 이름"**을 꺼내는것, 엔터는 'Enter'라는 이름.(대문자 E로 시작하는 점)
+24.if (event.key === 'Enter') showName(): 앞에서 배운 if이다. **"눌린 키가 엔터와 같다면 → showName을 실행해라"**라는 뜻
+
+◆ 추가메모 ◆
+1. 속성: href, onclick, id, placeholder는 모두 "태그에 붙는 추가 설정"
+2. + : 20번 코드의 name + "님, 환영합니다!" 에서 + 는 글씨를 이어붙이는 기호.
+3. {로 열면 }로 반드시 닫는다.
+4. 버튼의 onclick 이름과 function 이름은 똑같이 맞춘다.
+5. 함수 이름이 두 개 겹치면 아래쪽 것만 작동한다.
+6. id 이름표도 겹치지 않게 다르게 붙인다.
+
+
+
+1. if (조건) { ... }: "만약 이 조건이 맞으면 이걸 해라"
+2. else { ... }: "그게 아니면 이걸 해라"
+3. name === "" : **”name이 비어 있니?”**를 묻는 비교
+   -""는 아무 글자도 없는 빈 글씨를 뜻한다
+   -===는 **”같은가?”**를 묻는 기호
+
+
+C:\Users\worka\AppData\Local\Programs\Microsoft VS Code

@@ -1,0 +1,47 @@
+<style>
+  h1 {
+    color: green;
+  }
+  p {
+    font-size: 20px;
+  }
+</style>
+<h1>안녕하세요!</h1>
+<p>저는 지원이고, 오늘 처음 코딩을 해봐요.</p>
+<h2>내가 배울 것</h2>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>React</li>
+</ul>
+<a href="https://www.google.com">구글로 가기</a>
+
+<button onclick="sayHello()">눌러보세요</button>
+<p id="message">아직 아무 일도 없어요.</p>
+
+<input id="nameInput" placeholder="이름을 입력하세요">
+<button onclick="showName()">확인</button>
+
+<button onclick="showName1()">확인</button>
+<p id="result"></p>
+
+<script>
+  function sayHello() {
+    document.getElementById("message").innerText = "버튼이 눌렸어요!";
+  }
+
+  function showName() {
+    const name = document.getElementById("nameInput").value;
+    document.getElementById("result").innerText = name + "님, 환영합니다!";
+  }
+
+  function showName1() {
+    const name = document.getElementById("nameInput").value;
+    if (name === "") {
+      document.getElementById("result").innerText = "이름을 먼저 입력해 주세요!";
+    } else {
+      document.getElementById("result").innerText = name + "님, 환영합니다!";
+    }
+  }
+</script>
