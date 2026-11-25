@@ -33,12 +33,6 @@
     document.getElementById("result").innerText = name + "님, 환영합니다!";
   }
 </script>
-21. onkeydown: onclick의 친구예요. onclick이 "눌렸을 때"라면 onkeydown은 **"키보드의 키가 눌렸을 때"  
-     <input>에 붙는 속성
-22.event: 방금 일어난 일에 대한 정보 꾸러미. 어떤 키가 눌렸는지, 어디를 클릭했는지 같은 정보가 담겨 있다
-23.event.key: 그 꾸러미 안에서 **"눌린 키의 이름"**을 꺼내는것, 엔터는 'Enter'라는 이름.(대문자 E로 시작하는 점)
-24.if (event.key === 'Enter') showName(): 앞에서 배운 if이다. **"눌린 키가 엔터와 같다면 → showName을 실행해라"**라는 뜻
-
 ◆ 추가메모 ◆
 1. 속성: href, onclick, id, placeholder는 모두 "태그에 붙는 추가 설정"
 2. + : 20번 코드의 name + "님, 환영합니다!" 에서 + 는 글씨를 이어붙이는 기호.
@@ -47,13 +41,39 @@
 5. 함수 이름이 두 개 겹치면 아래쪽 것만 작동한다.
 6. id 이름표도 겹치지 않게 다르게 붙인다.
 
-
-
 1. if (조건) { ... }: "만약 이 조건이 맞으면 이걸 해라"
 2. else { ... }: "그게 아니면 이걸 해라"
 3. name === "" : **”name이 비어 있니?”**를 묻는 비교
    -""는 아무 글자도 없는 빈 글씨를 뜻한다
    -===는 **”같은가?”**를 묻는 기호
+21. onkeydown: onclick의 친구예요. onclick이 "눌렸을 때"라면 onkeydown은 **"키보드의 키가 눌렸을 때"  
+     <input>에 붙는 속성
+22.event: 방금 일어난 일에 대한 정보 꾸러미. 어떤 키가 눌렸는지, 어디를 클릭했는지 같은 정보가 담겨 있다
+23.event.key: 그 꾸러미 안에서 **"눌린 키의 이름"**을 꺼내는것, 엔터는 'Enter'라는 이름.(대문자 E로 시작하는 점)
+24.if (event.key === 'Enter') showName(): 앞에서 배운 if이다. **"눌린 키가 엔터와 같다면 → showName을 실행해라"**라는 뜻
+
+    input {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid skyblue;
+    border-radius: 8px;
+  }
+  button {
+    padding: 8px 16px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+25.input { ... }: 모든 입력창에 적용
+26.button { ... }: 모든 버튼에 적용
+
+27 padding: 글씨와 테두리 사이의 안쪽 여백이에요. 8px 16px처럼 두 값을 쓰면 위아래 8, 좌우 16이에요. 여백이 클수록 상자가 넉넉해져요.
+28 border: 테두리예요. 2px solid skyblue는 두께 2, 실선, 하늘색이라는 뜻이고, none은 테두리를 없애요.
+29 border-radius: 모서리를 둥글게 해요. 숫자가 클수록 더 둥글어져요.
+30 background-color: 배경색이에요. color가 글씨색인 것과 구분하세요.
+31 cursor: pointer: 마우스를 올렸을 때 손가락 모양 커서로 바뀌어서 "누를 수 있어요"를 알려 줘요.
 
 
 C:\Users\worka\AppData\Local\Programs\Microsoft VS Code
